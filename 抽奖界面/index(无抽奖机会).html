@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+<title>无抽奖机会界面</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style-cj.css">
+
+</head>
+<body>
+<div class="main">
+  <div class="banner"><img src="images/banner-cj.jpg"/></div>
+  <div class="main-header">
+  
+  <p class="p1">您有<span class="coud_num">0</span> 次机会</p>
+  </div>
+  <div class="main-body">
+     <div id="zhuanpan">
+          <img id="img" class="rotary-table" src="images/four_zhuanpan1.png">
+          <img id="tip" class="point i_cont" src="images/Pointer2.png" >
+      </div>
+  </div>  
+  
+  <div class="main-footer"><a href="抽奖记录.html" class="footer-a2">中奖记录>></a><a href="#" class="footer-a" data-toggle="modal" data-target="#myModal">活动规则>></a></div> 
+</div>
+	<!-- 话费50元 -->
+			<div id="apply1" class="modal fade padding1" tabindex="-1" data-replace="true" data-backdrop="static" >
+				<div class="modal-dialog modal-content">
+					<div class="modal-body">
+					   <div class="img1"><img src="images/2.png"/></div>
+                       <p><span>奖品将于次月28日前到账，请留意查收！</span></p>
+                       <a href="#" class="colse1" data-dismiss="modal"></a>
+                       <button type="button" class="but5" data-dismiss="modal" data-toggle="modal" onclick="window.location='Receiveprizes.html'">立即领取</button>
+					</div>
+				</div>
+			</div>
+            
+		<!--  咖啡机-->
+			<div id="apply2" class="modal fade padding1" tabindex="-1" data-replace="true" data-backdrop="static">
+				<div class="modal-dialog modal-content">
+					<div class="modal-body">
+						
+						
+					   <div class="img1"><img src="images/2.png"/></div>
+                        <p><span>奖品将于次月28日前到账，请留意查收！</span></p>
+                       <a href="#" class="colse1" data-dismiss="modal"></a>
+                       <button type="button" class="but5" data-dismiss="modal" data-toggle="modal"  onclick="window.location='Receiveprizes.html'">立即领取</button>
+					</div>
+				</div>
+			</div>
+            
+       	<!-- mater9手机-->
+			<div id="apply3" class="modal fade padding1" tabindex="-1" data-replace="true" data-backdrop="static">
+				<div class="modal-dialog modal-content">
+					<div class="modal-body">
+						
+						
+					   <div class="img1"><img src="images/5.png"/></div>
+                       <p><span>奖品将于次月28日前到账，请留意查收！</span></p>
+                       <a href="#" class="colse1" data-dismiss="modal"></a>
+                       <button type="button" class="but5" data-dismiss="modal" data-toggle="modal"  onclick="window.location='Receiveprizes.html'">立即领取</button>
+					</div>
+				</div>
+			</div>
+            
+            
+         	<!--  扫地机-->
+			<div id="apply4" class="modal fade padding1" tabindex="-1" data-replace="true" data-backdrop="static">
+				<div class="modal-dialog modal-content">
+					<div class="modal-body">
+					
+						
+					   <div class="img1"><img src="images/3.png"/></div>
+                        <p><span>奖品将于次月28日前到账，请留意查收！</span></p>
+                       <a href="#" class="colse1" data-dismiss="modal"></a>
+                       <button type="button" class="but5" data-dismiss="modal" data-toggle="modal"  onclick="window.location='Receiveprizes.html'">立即领取</button>
+					</div>
+				</div>
+			</div>
+				<!--  空气机-->
+			<div id="apply5" class="modal fade padding1" tabindex="-1" data-replace="true" data-backdrop="static">
+				<div class="modal-dialog modal-content">
+					<div class="modal-body">
+						
+						
+					   <div class="img1"><img src="images/4.png"/></div>
+                        <p><span>奖品将于次月28日前到账，请留意查收！</span></p>
+                       <a href="#" class="colse1" data-dismiss="modal"></a>
+                       <button type="button" class="but5" data-dismiss="modal" data-toggle="modal"  onclick="window.location='Receiveprizes.html'">立即领取</button>
+					</div>
+				</div>
+			</div>
+			<!--  谢谢参与-->
+			<div id="apply6" class="modal fade padding1" tabindex="-1" data-replace="true" data-backdrop="static">
+				<div class="modal-dialog modal-content">
+					<div class="modal-body">
+						
+						
+					   <div class="img1"><img src="images/6.png"/></div>
+                        <p><span>亲，未能中奖喔，再接再厉转</span></p>
+                       
+                       <a href="#" class="colse1" data-dismiss="modal"></a>
+                       <button type="button" class="but5" data-dismiss="modal" data-toggle="modal" >确定</button>
+					</div>
+				</div>
+			</div>
+<!--加载-->
+	<div id="applyLoading" class="modal fade" tabindex="-1" data-replace="true"  data-backdrop="static" >
+				<div class="modal-dialog modal-content">
+					<div class="modal-body">
+						<div class="loading-container" align="center">
+							<img src="images/ajax-loader.gif" alt="Loading" class="loading-gif">
+						</div>
+						<p align="center">后台在努力加载，稍等一会儿哦~</p>
+					</div>
+				</div>
+	</div>
+<!-- 温馨提示 活动规则-->
+<div id="myModal" class="modal fade s3" tabindex="-1" data-replace="true" data-backdrop="static">
+  <div class="modal-dialog">
+      <div class="hd-title"></div>
+      <a href="#" class="close2"></a>
+      <div class="modal-body" style="height: 250px; overflow: auto;">
+
+      <p>
+      <p>
+           &nbsp;（一）活动期内，凡绑定我行账户作为提取公积金用途的客户，即可通过关注东莞银行微信公众号参与幸运抽奖活动，获取幸运随机好礼。<br />
+&nbsp;（二）活动方式：幸运大转盘在活动期间，每月初将符合条件的客户形成白名单，通过微信公众号对白名单客户进行提醒，并将抽奖规则告知。客户通过登录“东莞银行”微信公众号，点击进入“特色服务”—“幸运大转盘”活动。若客户抽中幸运好礼，系统会要求客户填写相应手机号码、邮箱以及收货地址等信息；若客户没有中奖，系统会弹出未中奖提示。<br />
+（三）活动礼品分类<br/>
+<img src="images/gz.PNG">
+
+&nbsp;（四）中奖率控制:每个符合条件的客户活动期间每天仅限一次参与机会，且活动期内只有一次中奖机会。所有活动奖品均可以通过调整商品库存+中奖率来同时控制，以确保活动顺利进行。<br />
+&nbsp;（五）礼品领取方式:若客户抽中奖品，话费将直接充值至客户的手机号码，实物类奖品将在客户中奖5天内，根据中奖用户所填写的手机号码及邮寄地址直接寄送实物奖品。
+
+      </p>
+      </p>
+  </div>
+  
+  </div>
+</div>
+	
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script>  
+<script type="text/javascript">
+   /* 获取抽奖机会值*/
+    var nun1=$(".coud_num").html();
+		// 转盘样式，a：旋转角度，p：概率（1代表100%），t：需要显示的其它信息（文案or分享）
+	var result_angle = [{a:0,p:0.1,t:'谢谢惠顾'},{a:30,p:1,t:'华为手机'},{a:60,p:0.1,t:'谢谢惠顾'},{a:90,p:0.01,t:'扫地机'},{a:120,p:0.2,t:'谢谢惠顾'},{a:150,p:0.01,t:'扫地机'},{a:180,p:0.3,t:'谢谢惠顾'},{a:210,p:0.01,t:'50元话费'}
+	,{a:240,p:0.5,t:'谢谢惠顾'},{a:270,p:0.01,t:'咖啡机'},{a:300,p:0.7,t:'谢谢惠顾'},{a:330,p:0.01,t:'50元话费'}];
+		var rotate = {
+			rotate_angle : 0, //起始位置为0
+			flag_click : true, //转盘转动过程中不可再次触发
+			calculate_result:function(type,during_time){//type:0,箭头转动,1,背景转动;during_time:持续时间(s)
+				var self = this;
+				type = type || 0; // 默认为箭头转动
+				during_time = during_time || 1; // 默认为1s
+
+				var rand_num = Math.ceil(Math.random() * 100); // 用来判断的随机数，1-100
+
+				var result_index; // 最终要旋转到哪一块，对应result_angle的下标
+				var start_pos = end_pos = 0; // 判断的角度值起始位置和结束位置
+
+				for(var i in result_angle){
+					start_pos = end_pos + 1; // 区块的起始值
+					end_pos = end_pos + 100 * result_angle[i].p; // 区块的结束值
+
+					if(rand_num >= start_pos && rand_num <= end_pos){ // 如果随机数落在当前区块，那么获取到最终要旋转到哪一块
+						result_index = i;
+						break;
+					}
+				}
+
+				var rand_circle = Math.ceil(Math.random() * 2) + 1; // 附加多转几圈，2-3
+
+				self.flag_click = false; // 旋转结束前，不允许再次触发
+				if(type == 1){ // 转动盘子
+					self.rotate_angle =  self.rotate_angle - rand_circle * 360 - result_angle[result_index].a - self.rotate_angle % 360;
+					$('#img').css({
+						'transform': 'rotate('+self.rotate_angle+'deg)',
+						'-ms-transform': 'rotate('+self.rotate_angle+'deg)',
+						'-webkit-transform': 'rotate('+self.rotate_angle+'deg)',
+						'-moz-transform': 'rotate('+self.rotate_angle+'deg)',
+						'-o-transform': 'rotate('+self.rotate_angle+'deg)',
+						'transition': 'transform ease-out '+during_time+'s',
+						'-moz-transition': '-moz-transform ease-out '+during_time+'s',
+						'-webkit-transition': '-webkit-transform ease-out '+during_time+'s',
+						'-o-transition': '-o-transform ease-out '+during_time+'s'
+					});
+				}else{ // 转动指针
+					self.rotate_angle = self.rotate_angle + rand_circle * 360 + result_angle[result_index].a - self.rotate_angle % 360;
+					$('.i_cont').css({
+						'transform': 'rotate('+self.rotate_angle+'deg)',
+						'-ms-transform': 'rotate('+self.rotate_angle+'deg)',
+						'-webkit-transform': 'rotate('+self.rotate_angle+'deg)',
+						'-moz-transform': 'rotate('+self.rotate_angle+'deg)',
+						'-o-transform': 'rotate('+self.rotate_angle+'deg)',
+						'transition': 'transform ease-out '+during_time+'s',
+						'-moz-transition': '-moz-transform ease-out '+during_time+'s',
+						'-webkit-transition': '-webkit-transform ease-out '+during_time+'s',
+						'-o-transition': '-o-transform ease-out '+during_time+'s'
+					});
+				}
+				// 旋转结束后，允许再次触发
+				setTimeout(function(){ 
+					self.flag_click = true;
+					// 告诉结果
+					if(result_angle[result_index].t=="50元话费")
+					{
+							$('#apply1').modal('show');
+					}else if(result_angle[result_index].t=="咖啡机"){
+							$('#apply2').modal('show');
+					}else if(result_angle[result_index].t=="华为手机"){
+							$('#apply3').modal('show');
+				    }else if(result_angle[result_index].t=="扫地机"){
+							$('#apply4').modal('show');		
+					}else if(result_angle[result_index].t=="空气机"){
+							$('#apply5').modal('show');		
+					}else{
+							$('#apply6').modal('show');
+					}
+					
+					
+					nun1--;
+					$(".coud_num").html(nun1);
+					if(parseInt(nun1)<= 0){
+						$("#tip").attr("src","images/Pointer2.png");
+			             return false;
+		            }
+					
+				},during_time*1000);
+			}
+		}
+		$(document).ready(function(){
+		
+			$('#tip').click(function(){
+			if(parseInt(nun1)<= 0){
+			$("#tip").attr("src","images/Pointer2.png");
+			return false;
+		}
+				if(rotate.flag_click){ // 旋转结束前，不允许再次触发
+					rotate.calculate_result(1,1);
+				}
+			});
+					
+	 });
+		
+		
+$(".close2").click(function(){
+		 $('#myModal').modal('hide');
+});
+
+
+
+</script>  
+</body>
+</html>

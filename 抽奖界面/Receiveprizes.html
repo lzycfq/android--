@@ -1,0 +1,130 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>抽奖记录界面</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="stylesheet" href="css/amazeui.min.css">
+<link rel="stylesheet" href="css/receiveprizes.css" />
+</head>
+<body>
+<div class="am-g">
+	<!-- LOGO -->
+	<div class="am-u-sm-12 am-text-center" >
+		<br />
+		<br />
+		<!--
+        logo
+        -->
+		 <img src="images/hdrklj.png" width="100%">
+		<br />
+		<br />
+		 
+	</div>
+
+	<!-- 提交框 -->
+	<div class="am-u-sm-11 am-u-sm-centered">
+		
+	<form class="am-form" id="getadress" name="">
+	  <fieldset class="myapp-login-form am-form-set">
+		<div class="am-form-group am-form-icon">
+			<i class="am-icon-user"></i>
+                   <input type="text" name="phone" id="phone" class="myapp-login-input-text am-form-field" placeholder="手机号码"  required ata-rule-mobile="true" data-msg-required="请输入手机号" data-msg-mobile="请输入正确格式" >
+			
+			
+		</div>
+		<div class="am-form-group am-form-icon">
+			<i class="am-icon-lock"></i>
+			<input type="text" name="name" id="name" class="myapp-login-input-text am-form-field" placeholder="收货人" required>
+		</div>
+	    <div class="am-form-group am-form-icon">
+			<i class="am-icon-lock"></i>
+			<input type="text" name="adress" id="adress" class="myapp-login-input-text am-form-field" placeholder="输入地址" required>
+		</div>
+	  </fieldset>
+	  <button type="submit" class="myapp-login-form-submit am-btn am-btn-primary am-btn-block " id="getin">确认</button>
+	</form>
+	</div>
+	<div class="am-text-center am-u-sm-11 am-u-sm-centered myapp-login-form-shortcut">
+		<hr class="myapp-login-form-hr" />
+		<span class="myapp-login-form-hr-font">领取奖品</span>
+	</div>
+
+	
+
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script src="js/app.js"></script>
+<script type="text/javascript" src="js/jQuery.Form.js" ></script>
+<script src="js/jquery.validate.js"></script>
+<script>
+$(function(){
+    //jquery.validate
+	$("#getadress").validate({
+		submitHandler: function() {
+			//验证通过后 的js代码写在这里
+		}
+	})
+		
+})
+
+$.validator.setDefaults({
+	errorElement:'span'
+});
+
+//配置通用的默认提示语
+$.extend($.validator.messages, {
+	required: '必填',
+    equalTo: "请再次输入相同的值"
+});
+
+
+
+//手机验证规则  
+jQuery.validator.addMethod("mobile", function (value, element) {
+    var mobile = /^1[3|4|5|7|8]\d{9}$/;
+	return this.optional(element) || (mobile.test(value));
+}, "手机格式不对");
+
+
+</script>
+<script>
+$('#getin').on('click', function() {
+
+    $('#getadress').on('submit', function() {
+        var phone= $('input[name=phone]').val(),
+        name = $('input[name=name]').val(),
+        adress=$('input[name=adress]').val();
+      
+   
+
+        $(this).ajaxSubmit({
+            type: 'post', // 提交方式 get/post
+            url: 'xx', // 需要提交的 url
+            data: {
+                'phone': phone,
+                'name':name,
+                'adress':adress
+                
+            },
+            success: function(data) { // data 保存提交后返回的数据，一般为 json 数据
+                // 此处可对 data 作相关处理
+                alert('提交成功！');
+               
+            }
+          /*  $('regis').resetForm(); // 提交后重置表单*/
+        });
+        return false; // 阻止表单自动提交事件
+    
+});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+<title>领奖界面</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style-cj.css">
+
+</head>
+<body>
+<div class="main">
+  <div class="banner"><img src="images/banner-cj3.jpg"/></div>
+
+       <div class="title2">抽奖记录</div>
+       <!--
+       	后台写个模板输出ajax
+       -->
+       <div class="list1" id="list1">
+    	              <div class="l1">
+                <div class="p1" id="fitstrecord">华为手机</div>
+                <div class="p2" id="firstlottery" time>2017-10-24</div>   
+            </div>
+         	<div class="l1">
+                <div class="p1" id="tworecord">扫地机器人</div>
+                <div class="p2" id="twolottery" time>2017-10-23</div>
+            </div>
+        	<div class="l1">
+                <div class="p1" id="threerecord">空气清新机</div>
+                <div class="p2" id="threelottery" time>2017-10-22</div>      
+            </div>
+            <div class="l1">
+                <div class="p1" id="fourrecord">50元话费</div>
+                <div class="p2" id="fourlottery" time>2017-10-21</div>   
+            </div>
+  
+        </div>
+        <div class="title3">*温馨提示：中奖后，奖品将于次月28日前到账。</div>
+        <a href="index.html" class="bt1" >返&nbsp;回</a>
+    </div>
+     
+     
+     
+  </div>  
+ <script src="js/jquery.min.js"></script>
+<script>
+	$(function(){
+//倒计时
+refreshOnTime();
+  //5秒请求一次
+setInterval('refreshOnTime()', 500000);
+}); 
+      $.ajax({  
+            type : "post",  
+            async : false,  //同步请求  
+            url : url,  
+            data : data,  
+            timeout:1000,  
+            success:function(dates){  
+                //alert(dates);  
+                $("#list1").html(dates);//要刷新的div(写个后台模板输出Ajax)
+            },  
+            error: function() {  
+               // alert("失败，请稍后再试！");  
+            }  
+        });  
+  
+</script>
+		
+
+</body>
+</html>
