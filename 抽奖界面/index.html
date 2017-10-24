@@ -18,7 +18,7 @@
 <div class="banner"><img src="images/banner-cj3.jpg"/></div>
   <div class="main-header">
 
-  <p class="p1">您有<span class="coud_num">5</span> 次机会</p>
+  <p class="p1">你每天有<span class="coud_num">1</span> 次机会，祝你好运！</p>
   </div>
   <div class="main-body">
      <div id="zhuanpan">
@@ -234,7 +234,7 @@
 					nun1--;
 					$(".coud_num").html(nun1);
 				/*	设置点击次数*/
-					if(parseInt(nun1)<=0){
+					if(parseInt(nun1)<=1){
 						$("#tip").attr("src","images/Pointer2.png");
 			             return false;
 		            }
@@ -247,7 +247,7 @@
 			$('#tip').click(function(){
 				/*	设置点击次数*/
 				
-			if(parseInt(nun1)<= 0){
+			if(parseInt(nun1)<=0){
 			$("#tip").attr("src","images/Pointer2.png");
 			return false;
 		}
