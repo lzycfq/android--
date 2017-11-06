@@ -7,6 +7,50 @@
 @import "fullcalendar.css";
 @import "colorbox.css";
 
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 	
 	a {
 		text-decoration: none;
@@ -441,33 +485,56 @@
 	    left: auto;
 	}
 /*banner轮播图*/
-     #main{ 
-            width:420px; 
-            height:240px; 
-        
-          
-        
-            position: relative; 
-        } 
-        #main .list{ 
-            width:22%; 
-           border: dashed;
-            height: 60px; 
-            float:left; 
-        } 
-        #main .list img{ 
-            width:70%; 
-            height:58px; 
-            border:1px solid #DDD; 
-            border-radius: 3px; 
-        } 
-        #page{ 
-            width:480px; 
-            text-align:center; 
-          
-        
-            height:25px; 
-        } 
+
+/*--------------SLIDER----------------*/
+
+#slider {
+	width: 100%;
+	margin: 50px auto;
+}
+
+
+/*--------------CONTROLS--------------*/
+
+/*position controls*/
+.controls li {
+	top: 50%;
+	margin-top: -30px
+}
+
+.controls li:nth-child(1) {
+	left: 0;
+}
+
+.controls li:nth-child(2) {
+	right: 0;
+}
+
+
+/*------------PAGINATION------------*/
+
+/*style pagination*/
+.pagination li {
+	background-color: #ddd;
+}
+
+.pagination li.active {
+	background-color: #000;
+}
+
+
+/*-------------HELPERS----------------*/
+
+ .responsive {
+	width: 100%;
+	height: auto;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
       
 /* Main Header */
 
@@ -602,6 +669,10 @@
 .active_color{
 		color:#ff5b1e !important;
 }
+#sliderlist ul .active_color a{
+		color:#ff5b1e !important;
+	
+}
 	.tab_label {
 		display: block;
 		height: 20px;
@@ -623,6 +694,7 @@
 	list-style: none;
 	line-height: 30px;
 	color: #999999;
+	margin-left: 15px;
 }
 /* Contents */
 
@@ -921,7 +993,8 @@
 		font-family: Oswald;
 		font-size: 14px;
 		text-shadow: 0 1px 0 #FFFFFF;
-		font-weight: normal;	
+		font-weight: normal;
+	
 	}
 
 /* Icons */
@@ -1518,7 +1591,98 @@
 		background-color: #F9F9F9;
     	box-shadow: 0 1px 0 #FFFFFF inset;
 	}
+/*Excel导入信息*/
+ table {
+    border: 1px solid #ccc;
+    width: 95%;
+    margin:0;
+    padding:0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 auto;
+  }
 
+  table tr {
+    border: 1px solid #ddd;
+    padding: 5px;
+  }
+
+  table th, table td {
+    padding: 10px;
+    text-align: center;
+  }
+
+  table th {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  @media screen and (max-width: 600px) {
+
+    table {
+      border: 0;
+    }
+
+    table thead {
+      display: none;
+    }
+
+    table tr {
+      margin-bottom: 10px;
+      display: block;
+      border-bottom: 2px solid #ddd;
+    }
+
+    table td {
+      display: block;
+      text-align: right;
+      font-size: 13px;
+  
+      border-bottom: 1px dotted #ccc;
+    }
+
+    table td:last-child {
+      border-bottom: 0;
+    }
+
+    table td:before {
+      content: attr(data-label);
+      float: left;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+#add{
+	
+	height: 30px !important;
+	width: 80px !important;
+	background-color: #FF5B1E !important;
+	color: white;
+	border: 0px;
+	margin: 20px 23px;
+}
+#delete{
+		height: 30px !important;
+	width: 80px !important;
+	background-color: orange !important;
+	color: white;
+	border: 0px;
+}
+#deleteone{
+			height: 30px !important;
+	width: 80px !important;
+	background-color: #EEEEEE !important;
+	color: #666666;
+	border: 0px;
+	margin-left: 19px;
+}
+#basic_form_name{
+	height: 30px;
+	width: 45%;
+border: 0px;
+
+}
 	.twCheckbox .checker {
 		position: relative;
 		vertical-align: middle;
@@ -2328,50 +2492,3 @@
 		margin-top: 120px;
 	}
 
-/* Change Pattern -- For Demonstration only */
-
-	.changePattern {
-		width: 28px;
-		height: auto;
-		border-radius: 0 3px 3px 0;
-		background-color: rgba(0, 0, 0, 0.9);
-		position: fixed;
-		top: 200px;
-		left: 0;
-		padding-top: 6px;
-		z-index: 1000;
-	}
-
-	.changePattern span {
-		display: block;
-		margin: 0 auto;
-		margin-bottom: 6px;
-		width: 16px;
-		height: 16px;
-		border-radius: 3px;
-		cursor: pointer;
-	}
-
-	#pattern1 {
-		background: url("../Images/Patterns/pattern1.png") no-repeat 0 0;
-	}
-
-	#pattern2 {
-		background: url("../Images/Patterns/pattern2.png") no-repeat 0 0;
-	}
-	
-	#pattern3 {
-		background: url("../Images/Patterns/pattern3.png") no-repeat 0 0;
-	}
-
-	#pattern4 {
-		background: url("../Images/Patterns/pattern4.png") no-repeat 0 0;
-	}
-
-	#pattern5 {
-		background: url("../Images/Patterns/pattern5.png") no-repeat 0 0;
-	}
-
-	#pattern6 {
-		background: url("../Images/Patterns/pattern6.png") no-repeat 0 0;
-	}

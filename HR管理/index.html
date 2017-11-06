@@ -236,25 +236,25 @@
 
 				<!-- Quick Statistics -->
 				<div class="g_3 quick_stats">
-					<div class="big_stats visitor_stats">
+					<div class="big_stats visitor_stats" id="alldhmuyee">
 						9827
 					</div>
 					<h5 class="stats_info">总查看：礼尚往来次数</h5>
 				</div>
 				<div class="g_3 quick_stats">
-					<div class="big_stats tickets_stats">
+					<div class="big_stats tickets_stats" id="todaymuyee">
 						23
 					</div>
 					<h5 class="stats_info">今日浏览量</h5>
 				</div>
 				<div class="g_3 quick_stats">
-					<div class="big_stats users_stats">
+					<div class="big_stats users_stats" id="dhmuyee">
 						982
 					</div>
 					<h5 class="stats_info">今日兑换量</h5>
 				</div>
 				<div class="g_3 quick_stats">
-					<div class="big_stats orders_stats">
+					<div class="big_stats orders_stats" id="alldhmuyee">
 						2045
 					</div>
 					<h5 class="stats_info">总兑换量</h5>
@@ -349,61 +349,41 @@
 					
 					<div class="widget_contents">
 						<div class="pie_charts">
-							<div id="main"> 
-    <div class="list"> 
-           <img src="Images/1.png" alt="" style="max-width:100%;overflow:hidden;" > 
-    </div> 
-    <div class="list"> 
-           <img src="Images/1.png" alt="" style="max-width:100%;overflow:hidden;"> 
-    </div> 
-    <div class="list"> 
-           <img src="Images/1.png" alt="" style="max-width:100%;overflow:hidden;"> 
-    </div> 
-    <div class="list"> 
-           <img src="./picture/3ajax_img/a4.jpg" alt="" width="" height=""> 
-    </div> 
-    <div class="list"> 
-           <img src="./picture/3ajax_img/a5.jpg" alt="" width="" height=""> 
-    </div> 
-    <div class="list"> 
-           <img src="./picture/3ajax_img/a6.jpg" alt="" width="" height=""> 
-    </div> 
-    <div class="list"> 
-           <img src="./picture/3ajax_img/a7.jpg" alt="" width="" height=""> 
-    </div> 
-    <div class="list"> 
-           <img src="./picture/3ajax_img/a8.jpg" alt="" width="" height=""> 
-    </div> 
-    <div class="list"> 
-           <img src="./picture/3ajax_img/a7.jpg" alt="" width="" height=""> 
-    </div> 
-    <div class="list"> 
-           <img src="./picture/3ajax_img/a6.jpg" alt="" width="" height=""> 
-    </div> 
-    <div class="list"> 
-           <img src="./picture/3ajax_img/a5.jpg" alt="" width="" height=""> 
-    </div> 
-    <div class="list"> 
-           <img src="./picture/3ajax_img/a4.jpg" alt="" width="" height=""> 
-    </div> 
-</div> 
+<div id="slider">
+	<ul class="slides clearfix">
+		<li><img class="responsive" id="imgajax" src="img/1.jpg"></li>
+		<li><img class="responsive" id="imgajax" src="img/2.jpg"></li>
+		<li><img class="responsive" id="imgajax" src="img/3.jpg"></li>
+		<li><img class="responsive" id="imgajax" src="img/4.jpg"></li>
+	</ul>
+	<ul class="controls">
+		<li><img src="img/prev.png" alt="previous"></li>
+		<li><img src="img/next.png" alt="next"></li>
+	</ul>
+	<ul class="pagination">
+		<li class="active"></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
 						</div>
 					</div>
 				</div>
 				<div class="g_6">
 					<div class="widget_header">
-						<h4 class="widget_header_title wwIcon i_16_add">Upload New</h4>
+						<h4 class="widget_header_title wwIcon i_16_add">上传文件/图片</h4>
 					</div>
 					<div class="widget_contents noPadding">
 						<div class="line_grid">
 							<div class="g_12">
 								<input type="file" class="simple_form" />
-								<div class="field_notice">Max Size: 20Mb</div>
+								<div class="field_notice">最大尺寸: 20Mb</div>
 							</div>
 						</div>
 						<div class="line_grid">
 							<div class="g_12">
-								<input type="submit" value="Upload .." class="simple_buttons" />
+								<input type="submit" value="上传 ...." class="simple_buttons" />
 							</div>
 						</div>
 					</div>
@@ -429,112 +409,124 @@
 		$("#sliderlist").slideToggle();
 	});
 </script>
+<script src="Javascript/easySlider.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#slider").easySlider( {
+			slideSpeed: 500,
+			paginationSpacing: "15px",
+			paginationDiameter: "12px",
+			paginationPositionFromBottom: "20px",
+			slidesClass: ".slides",
+			controlsClass: ".controls",
+			paginationClass: ".pagination"					
+		});
+	});
+</script>
+<!-- ajax更新数据-->
+<script>
+ /*第一次读取最新通知*/
+  setTimeout(function() {
+             Push();
+           },
+        200);
+      /*30轮询读取函数*/
+        setInterval(function() {
 
-<script type="text/javascript"> 
-    $(function(){ 
-        var posarr = [];//目标点存储位置 
-        var l,t; 
-        $('#main .list').each(function(i){ 
-            l = $(this)[0].offsetLeft; 
-            t = $(this)[0].offsetTop; 
-            posarr[i] = {left:l,top:t}; 
-        }) 
-        $('#main .list').each(function(n){ 
-            //alert(posarr[n].left) 
-            $(this).css({position:'absolute',left:posarr[n].left,top:posarr[n].top}) 
- 
-        }) 
-        $('#page a').click(function(){ 
-            var url = $(this).attr('href'); 
-            //alert(url); 
-            $.ajax({ 
-                type:'GET', 
-                url:url, 
-                data:'', 
-                dataType:'json', 
-                success:function(data){ 
-                    hiddenlist(data) 
- 
-                }//请求错误，请求完成 
-            })// ajax请求结束 
- 
-            return false; 
- 
-        })//点击函数结束,已经成功加载图片 
-//动画开始 
-        function hiddenlist(data){//收起图片 
-            var aList = $('#main .list'); 
-            var index = aList.length; 
-            var iNow = index; 
-            var t= setInterval(function(){ 
-                        aList.eq(index).animate({ 
-                            left:200, 
-                            top:280, 
-                            opacity:0 
-                        },800,'',function(){//回调函数 
-                            iNow-- 
-                            if(iNow <=0){ 
-                                loadList(data);//收起结束，调用load函数 
- 
-                            } 
- 
-                        }); 
-                        if(index>0){ 
-                            index--; 
-                        }else{ 
-                            clearInterval(t); 
-                        } 
-                         
- 
-                    },60) 
- 
- 
-        }//hiddenlist函数结束 
- 
-        function loadList(data){//展开图片 
-            $('#main .list').remove(); 
-                    //alert(data); 
-                    for(i in data){ 
-                        $('#main').append('<div class="list"><img src="'+data[i]+'" alt="" width="" height=""></div>'); 
-                      $('#main .list').eq(i).css({//注意空格 
-                        left:200, 
-                        top:280, 
-                        position:'absolute',//绝对定位 
-                        opacity:0 
- 
-                      }) 
-                    }//for in 
-                    //$('#main .list').each(function(index){ 
-                         
- 
-                    //}) 
-                    var index = 0; 
-                    var aList = $('#main .list'); 
- 
-                    //alert(aList.length) 
-                    //return; 
-                var t= setInterval(function(){ 
-                        aList.eq(index).animate({ 
-                            left:posarr[index].left, 
-                            top:posarr[index].top, 
-                            opacity:1 
-                        },800); 
-                        if(index<aList.length-1){ 
-                            index++; 
-                        }else{ 
-                            clearInterval(t); 
-                        } 
-                         
- 
-                    },60) 
- 
-        } //loadlist函数 
- 
- 
-     
-    })
-</script> 
- 
- 
+            Push();
+
+    },
+        30000);
+
+/*请求函数的ajax*/
+function Push(id) {
+
+    $.ajax({
+        type: "post",
+        url: "",
+        data: {
+            'id': id
+        },
+        async: true,
+        dataType: 'json',
+        success: function(data) {
+            var goods = '';
+            $.each(data, function(k, v) {
+              
+            goods+='<ul class="slides clearfix">
+		<li><img class="responsive" id="v.imgajax" src="img/1.jpg"></li>';
+		      
+            });
+            $('#slider .slider ').html(goods);
+        }
+    });
+}
+    });
+</script>
+<!--ajax更新浏览量-->
+<script>
+ /*第一次读取最新通知*/
+  setTimeout(function() {
+             Push();
+           },
+        200);
+      /*30轮询读取函数*/
+        setInterval(function() {
+
+            Push();
+
+    },
+        30000);
+
+/*请求函数的ajax*/
+function Push(id) {
+
+    $.ajax({
+        type: "post",
+        url: "",
+        data: {
+            'id': id
+        },
+        async: true,
+        dataType: 'json',
+        success: function(data) {
+            var goods = '';
+            $.each(data, function(k, v) {
+              
+            goods+='<div class="g_3 quick_stats">
+					<div class="big_stats visitor_stats" id="allmuyee">
+						'+v.allmuyee+'
+					</div>
+					<h5 class="stats_info">总查看：礼尚往来次数</h5>
+				</div>
+				<div class="g_3 quick_stats">
+					<div class="big_stats tickets_stats" id="todaymuyee">
+						'+v.todaymuyee+'
+						
+					</div>
+					<h5 class="stats_info">今日浏览量</h5>
+				</div>
+				<div class="g_3 quick_stats">
+					<div class="big_stats users_stats" id="dhmuyee">
+						'+v.dhmuyee+'
+				
+					</div>
+					<h5 class="stats_info">今日兑换量</h5>
+				</div>
+				<div class="g_3 quick_stats">
+					<div class="big_stats orders_stats" id="alldhmuyee">
+						'+v.alldhmuyee+'
+						
+					</div>
+					<h5 class="stats_info">总兑换量</h5>
+				</div>';
+		      
+            });
+            $('.quick_stats').html(goods);
+        }
+    });
+}
+    });
+</script>
 </body>
 </html>
