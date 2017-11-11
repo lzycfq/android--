@@ -12,7 +12,18 @@ ul, li {
 	padding: 0px;
 	list-style-type: none;
 }
-
+::-webkit-input-placeholder { /* WebKit browsers */
+　　color:#999999;
+　　}
+　　:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+　　color:#999999;
+　　}
+　　::-moz-placeholder { /* Mozilla Firefox 19+ */
+　　color:#999999;
+　　}
+　　:-ms-input-placeholder { /* Internet Explorer 10+ */
+　　color:#999999;
+　　}
 img {
 	border-top-width: 0px;
 	border-right-width: 0px;

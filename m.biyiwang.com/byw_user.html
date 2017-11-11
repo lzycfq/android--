@@ -1,13 +1,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="author" content="m.178hui.com" />
+<meta name="author" content="m.biyinwang.com" />
 <meta name="applicable-device" content="mobile" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <title>会员中心</title>
 <link href="css/public.css" rel="stylesheet" type="text/css" />
-<link href="css/user.css" rel="stylesheet" type="text/css">
-<script src="js/jquery-1.8.3.min.js"></script>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.js"></script>
 <script src="layer/layer.js"></script>
 <script>
 $(window).load(function() {
@@ -49,7 +49,7 @@ $(document).ready(function(){
   <!--header 结束-->
 
 	<div class="user_top w">
-    	<div class="user_logo"><div class="img"><img src="images/user_logo.jpg"></div></div>
+    	<div class="user_logo"><div class="img"><img src="images/user_logo1.jpg"></div></div>
         <div class="user_info">
         	<div class="user_name"><a id="username">刘志远</a></div>
             <div class="user_dengji">会员等级：<a id="Membership level">初级会员</a></div>
@@ -58,7 +58,7 @@ $(document).ready(function(){
     <div class="user_nav_list w">
     	<ul>
             <li>
-            	<a href="">
+            	<a href="byw_withdrawals.html">
                 	<div class="u_nav_icon money"></div>
                     <div class="u_nav_name">我的现金</div>
                      <div class="nt_icon"></div>
@@ -79,7 +79,7 @@ $(document).ready(function(){
                 	<div class="u_nav_icon tixian"></div>
                     <div class="u_nav_name">比银网积分兑换</div>
                     <div class="nt_icon"></div>
-                    <div class="u_money"><i id="Integral">0</i><i>分</i></div>
+                    <div class="u_money"><i id="Integrals">0</i><i>分</i></div>
               </a>
             </li>
             <li>
@@ -103,7 +103,7 @@ $(document).ready(function(){
                 	<div class="u_nav_icon znx"></div>
                     <div class="u_nav_name">站内消息</div>
                     <div class="nt_icon"></div>
-                    <div class="u_money"><i id="Station message">3</i><i>条</i></div>
+                    <div class="u_money"><i id="Stationmessage">3</i><i>条</i></div>
               </a>
             </li>
             <li>
@@ -124,20 +124,5 @@ $(document).ready(function(){
   <div class="copyright">经营许可证号:<a href="http://www.miit.gov.cn/" style="color: #666666;">粤ICP备17082633号-1</a>  Powered by biyin 1.0</div>
 </div>
 </body>
-<!--显示用户名 轮询请求用户名-->
-<script>
-setInterval("test()",20000);
-function test() {
-    $.ajax({
-        type: "POST",
-        url: "",
-        timeout: 60000,
-        async: true,
-        data: "username":username,
-        success: function(data, textStatus) {    
-            $("#username").html(data);
-        }
-    });
-}
-</script>
+
 </html>
