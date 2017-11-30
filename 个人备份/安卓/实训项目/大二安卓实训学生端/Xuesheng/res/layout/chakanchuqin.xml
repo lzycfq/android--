@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chakan"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/ed_kecheng"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:editable="false" />
+
+        <Button
+            android:id="@+id/btn_bykechengchaxun"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:background="@drawable/anniu"
+            android:text="查询" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio_zhengchang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正常" />
+
+            <RadioButton
+                android:id="@+id/radio_chidao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="迟到" />
+
+            <RadioButton
+                android:id="@+id/radio_kuangke"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="旷课" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_bychuqinchaxun"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:background="@drawable/anniu"
+            android:text="查询" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:gravity="center"
+            android:text="签到时间" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="课程名" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="姓名" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="状态" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </ListView>
+
+</LinearLayout>

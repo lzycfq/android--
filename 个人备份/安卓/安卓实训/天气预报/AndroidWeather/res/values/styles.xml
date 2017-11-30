@@ -1,0 +1,31 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+     
+      <!-- <item name="android:windowNoTitle">true</item>  
+  
+        Main theme colors  
+        App主题颜色（滑动阴影等）   your app's branding color (for the app bar)  
+        <item name="android:colorPrimary">#FFFF37</item>  
+  
+        状态栏颜色   darker variant of colorPrimary (for status bar, contextual app bars)  
+        <item name="android:colorPrimaryDark">#80FFFF</item>  
+  
+        控件主题样式（例如EditText，CheckBox，RadioButton等）  theme UI controls like checkboxes and text fields  
+        <item name="android:colorAccent">#80FFFF</item>   -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+<style name="TranslucentTheme" parent="AppTheme">
+    <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
+</style>
+
+
+</resources>

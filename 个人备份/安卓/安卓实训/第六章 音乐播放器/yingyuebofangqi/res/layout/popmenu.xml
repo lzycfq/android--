@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#019858"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <!-- 656265 -->
+
+    <Button
+        android:id="@+id/PopMenu_Btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/up_popmenu_btn"
+        android:drawableTop="@drawable/audio_list_item_rightmenu_addto_default"
+        android:tag="1"
+        android:text="收藏"
+        android:textColor="@color/baise" />
+
+    <Button
+        android:id="@+id/PopMenu_Btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/up_popmenu_btn"
+        android:drawableTop="@drawable/audio_list_item_rightmenu_setring_default"
+        android:tag="2"
+        android:text="下载"
+        android:textColor="@color/baise" />
+
+    <Button
+        android:id="@+id/PopMenu_Btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/up_popmenu_btn"
+        android:drawableTop="@drawable/audio_list_item_rightmenu_info_default"
+        android:tag="3"
+        android:text="查看信息"
+        android:textColor="@color/baise" />
+
+    <Button
+        android:id="@+id/PopMenu_Btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/up_popmenu_btn"
+        android:drawableTop="@drawable/audio_list_item_rightmenu_delete_default"
+        android:tag="4"
+        android:text="删除"
+        android:textColor="@color/baise" />
+
+</LinearLayout>

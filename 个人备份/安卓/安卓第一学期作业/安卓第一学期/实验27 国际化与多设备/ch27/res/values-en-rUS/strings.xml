@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AndroidResourceDemo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="shape_test">shape test</string>
+    <string name="state_list_drawable_test">state list drawable test</string>
+    <string name="style_test">style test</string>
+
+</resources>

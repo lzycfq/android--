@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>jQuery Mobile</title>
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+		<link rel="stylesheet" href="css/theme-classic.css" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+
+	<body>
+		<div data-role="page" id="home" data-theme="b">
+			<div data-role="header">
+				<h1>标题栏</h1>				
+			</div>
+			<div data-role="content">
+				<p>首页</p>
+				<div data-role="collapsible">
+					<h3>标题部分</h3>
+					<p>主体内容部分，默认会在本页折叠</p>
+				</div>
+
+				<div data-role="collapsible-set">
+					<div data-role="collapsible" data-collapsed="false">
+						<h3>第一部分</h3>
+						<p>第一部分主体内容</p>
+
+					</div>
+					<div data-role="collapsible">
+						<h3>第二部分</h3>
+						<p>第二部分主体内容
+							<</p>
+					</div>
+
+					<div data-role="collapsible">
+						<h3>第三部分</h3>
+						<p>第三部分主体内容</p>
+					</div>
+				</div>
+			</div>
+
+			<div data-role="footer" class="ui-footer-fixed">
+				<h1>CopyRight</h1>
+			</div>
+		</div>
+
+	</body>
+
+</html>

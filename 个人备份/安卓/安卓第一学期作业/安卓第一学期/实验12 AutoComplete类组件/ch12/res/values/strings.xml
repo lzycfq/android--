@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ch12</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string-array name="city">
+        <item >广州</item>
+        <item>guangzhou
+        </item>
+
+        <item >佛山</item>
+        
+ 
+        <item >珠海</item>
+    
+    
+        <item >中山</item>
+  
+ 
+        <item >汕尾</item>
+
+ 
+        <item >潮州</item>
+ 
+   
+        <item >深圳</item>
+    </string-array>
+   
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="statusNames">
+        <item>运营商名称</item>
+        <item>网络类型</item>
+        <item>所在国家</item>
+        <item>Sim卡串号</item>
+    </string-array>    
+</resources>

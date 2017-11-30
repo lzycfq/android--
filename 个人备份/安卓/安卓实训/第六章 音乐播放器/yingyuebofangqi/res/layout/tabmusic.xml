@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/cg">
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+       >
+       <ImageButton
+           android:id="@+id/back_main"
+           android:layout_marginLeft="8dp"
+           android:layout_height="20dp"
+           android:layout_width="20dp"
+           android:layout_marginTop="12dp"
+           android:background="@drawable/bg"/>
+       <TextView
+           android:id="@+id/tabmusic_tv2"
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:textColor="#FFF"
+           android:textSize="18dp"
+           android:gravity="center"
+           android:layout_marginTop="12dp"
+       android:layout_centerInParent="true"
+           />
+       <Spinner
+           android:id="@+id/tabmusic_iv3"
+           android:layout_height="38dp"
+           android:layout_width="38dp"
+           android:layout_alignParentRight="true"
+           android:layout_marginTop="5dp"
+          
+           android:background="@drawable/btn_title_navigation_default_theme_1"/>
+           </RelativeLayout>
+           <RelativeLayout
+               android:layout_width="fill_parent"
+        android:layout_height="40dp"      
+      >
+             <TextView 
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                   android:layout_marginTop="12dp"
+                     android:textSize="18dp"
+                     
+                     android:layout_marginLeft="20dp"
+                  android:text="单曲"
+                  android:textColor="#f0f0f0"/> 
+                   
+                   <TextView 
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                   android:layout_marginTop="12dp"
+                     android:textSize="18dp"
+                     
+                     android:layout_marginLeft="125dp"
+                  android:text="歌手"
+                  android:textColor="#f0f0f0"/> 
+                   <TextView 
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                   android:layout_marginTop="12dp"
+                     android:textSize="18dp"
+                     
+                     android:layout_marginLeft="230dp"
+                  android:text="专辑"
+                  android:textColor="#f0f0f0"/> 
+                   <TextView 
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                   android:layout_marginTop="12dp"
+                     android:textSize="18dp"
+                     
+                     android:layout_marginLeft="320dp"
+                  android:text="文件夹"
+                  android:textColor="#f0f0f0"/> 
+                  <TextView
+                      android:layout_height="2dp"
+                      android:layout_marginTop="45dp"
+                      android:layout_width="fill_parent"
+                      android:background="#f0f0f0"/>
+           </RelativeLayout>
+           <RelativeLayout 
+              android:layout_width="fill_parent"
+        android:layout_height="40dp"      
+      >
+               <TextView 
+                    android:id="@+id/tabmusic_quanbubofang"
+                   android:layout_height="25dp"
+                   android:layout_width="25dp"
+                   android:layout_marginTop="5dp"
+                   android:layout_marginLeft="23dp"
+                   android:background="@drawable/skin_image_ic_list_common_bar_header_allplay"/>
+                <TextView 
+                  android:layout_height="20dp"
+                  android:layout_width="20dp"
+                   android:layout_marginTop="7dp"
+                     android:id="@+id/tabmusic_chazhao"
+                     
+                     android:layout_marginLeft="132dp"
+                 android:background="@drawable/skin_image_btn_scan_main"/>
+                  <TextView 
+                  android:layout_height="25dp"
+                  android:layout_width="25dp"
+                   android:layout_marginTop="5dp"
+                     
+                     android:id="@+id/tabmusic_duoxuan"
+                     android:layout_marginLeft="235dp"
+                 android:background="@drawable/skin_image_ic_list_common_bar_header_editmode"/>
+                    <ImageView 
+                  android:layout_height="40dp"
+                  android:layout_width="40dp"
+                 
+                       android:id="@+id/tabmusic_iv2"
+                     
+                     android:layout_marginLeft="330dp"
+                 android:background="@drawable/skin_image_btn_title_scan_default"/>
+           </RelativeLayout>
+
+            <ListView
+               
+             
+                android:layout_below="@+id/ll1"
+               android:id="@+id/tabmusic_lv"
+                android:layout_width="match_parent"
+                android:layout_height="430dp" >
+
+    </ListView>
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+         android:layout_alignParentLeft="true"
+       
+          >
+        <ImageButton
+            android:id="@+id/tabmusic_ib1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/btn_playback_favorite_on_pressed"/>
+        <LinearLayout
+            
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/tabmusic_ib1"
+            android:orientation="vertical" >
+
+            <SeekBar
+                
+                android:id="@+id/tabmusic_sb"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="2dp"
+                android:minHeight="2dp"
+                android:layout_marginTop="-5dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:thumbOffset="10dp" 
+                android:progressDrawable="@drawable/seekbar_define_style"
+                android:thumb="@drawable/seekbar_thumb"
+                />
+            <TextView
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/tabmusic_tv4"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:lines="1"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:text="GG音乐"
+                     android:layout_marginTop="-10dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                   android:layout_marginLeft="5dp"
+                    android:id="@+id/tabmusic_tv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tabmusic_tv4"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:text="传播好音乐"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+            
+            <ImageView
+                  android:id="@+id/tabmusic_iv4"
+                android:layout_height="40dp"
+                android:layout_width="40dp"
+                android:layout_marginTop="-35dp"
+                android:layout_marginLeft="160dp"
+                android:background="@drawable/play_button"/>
+              <ImageView
+                    android:id="@+id/tabmusic_iv5"
+                android:layout_height="40dp"
+                android:layout_width="40dp"
+                android:layout_marginTop="-40dp"
+                android:layout_marginLeft="210dp"
+                android:background="@drawable/next_button_default"/>
+            </LinearLayout>
+            
+    </RelativeLayout>
+   </LinearLayout>

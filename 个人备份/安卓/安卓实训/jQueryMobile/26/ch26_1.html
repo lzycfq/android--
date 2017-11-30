@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>jQuery Mobile</title>
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+
+		<script src="js/jquery.min.js"></script>
+		<script>
+			$(document).on("pageinit", "#home", function() {
+				$(window).on("orientationchange", function(event) {
+					if(event.orientation == "portrait") // Portrait
+					{
+						$("p").css({ "background-color": "yellow", "font-size": "300%" });
+					} else // Landscape
+					{
+						$("p").css({ "background-color": "pink", "font-size": "200%" });
+					}
+				});
+			});
+		</script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+	</head>
+
+	<body>
+		<div data-role="page" id="home">
+			<div data-role="header" class="ui-header-fullscreen">
+				<h1>标题栏</h1>
+			</div>
+
+			<div data-role="content">
+
+				<p>不要迷恋哥，哥只是个传说！</p>
+			</div>
+
+			<div data-role="footer">
+				<h3>我不是叶问，我是页脚</h3>
+			</div>
+
+	</body>
+
+</html>

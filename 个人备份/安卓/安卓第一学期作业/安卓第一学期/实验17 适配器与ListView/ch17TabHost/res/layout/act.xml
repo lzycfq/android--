@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+        </TabWidget>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@android:id/tabs" >
+
+            <LinearLayout
+                android:id="@+id/Tab1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <CheckBox
+                    android:id="@+id/cbA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="读书" />
+
+                <CheckBox
+                    android:id="@+id/cbB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="看电影" />
+
+                <CheckBox
+                    android:id="@+id/cbC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="玩游戏" />
+
+                <Button
+                    android:id="@+id/btnOk"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="確定" />
+
+                <EditText
+                    android:id="@+id/edt"
+                   android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="你的选择是:" />
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:id="@+id/Tab2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <LinearLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="50dp">
+                    <TextView 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="用戶名："/>
+                    <EditText 
+                       android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="請輸入用戶名"
+                        />
+                </LinearLayout>
+                <LinearLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="密碼："/>
+                    <EditText 
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="請輸入密碼"
+                        android:layout_marginLeft="15dp"
+                        />
+                </LinearLayout>
+                <LinearLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="110dp">
+                    <Button 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnYes"
+                        android:text="確定"
+                       />
+                    <Button 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnNo"
+                        android:text="取消"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:id="@+id/Tab3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+               
+                    <LinearLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="用戶名："/>
+                    <EditText 
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:hint="請輸入用戶名"
+                        android:layout_marginLeft="10dp"
+                        />
+                </LinearLayout>
+                <LinearLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                   >
+                    <TextView 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="密碼："/>
+                    <EditText 
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="請輸入密碼"
+                        android:layout_marginLeft="28dp"
+                        />
+                </LinearLayout>
+                <LinearLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                   >
+                    <TextView 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="再次密碼："/>
+                    <EditText 
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="請再次輸入密碼"
+                        />
+                </LinearLayout>
+                <LinearLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="110dp">
+                     <Button 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnYes2"
+                        android:text="確定"
+                        
+                        />
+                    <Button 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnNo2"
+                        android:text="取消"
+                        />
+                </LinearLayout>
+                
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
+
+</TabHost>
+
+

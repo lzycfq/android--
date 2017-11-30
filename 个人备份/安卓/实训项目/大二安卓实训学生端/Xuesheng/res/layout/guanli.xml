@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/guanlijiemian"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/text_sno"
+        android:layout_width="wrap_content"
+        android:textSize="25dp"       
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <Button
+        android:id="@+id/btn_denglu"
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:layout_gravity="center"
+        android:background="@drawable/denglu" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_denglu"
+            android:layout_width="150px"
+            android:layout_height="150px"
+           
+            android:background="@drawable/saomiao"
+            android:onClick="saomiao" />
+
+        <Button
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:layout_marginLeft="200dp"
+            android:background="@drawable/guanbi"
+            android:onClick="guanbi" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/shangketixing"
+        android:onClick="tixing" />
+
+</LinearLayout>

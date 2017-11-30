@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>jQuery Mobile</title>
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+		<!--<link rel="stylesheet" href="css/theme-classic.css" />-->
+		<script src="js/jquery.min.js"></script>
+		<script>
+			var tabno = new Array();
+			tabno[0] = "#navone";
+			tabno[1] = "#navtwo";
+			tabno[2] = "#navthree";
+			var index = 0;
+			$(document).on("pageinit", "#home", function() {
+				$(document).on("swipeleft", "#home", function() {
+					index++;
+					if(index>2)
+						index=0;
+					changeTab(index);
+				});
+				$(document).on("swiperight", "#home", function() {
+					index--;
+					if(index<0)
+						index=2;
+					changeTab(index);
+				});
+			});
+
+			function changeTab(i) {
+				$(tabno[i]).click();
+			}
+		</script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<style>
+			.custom-corners .ui-bar {
+				-webkit-border-top-left-radius: inherit;
+				border-top-left-radius: inherit;
+				-webkit-border-top-right-radius: inherit;
+				border-top-right-radius: inherit;
+			}
+			
+			.custom-corners .ui-body {
+				border-top-width: 0;
+				-webkit-border-bottom-left-radius: inherit;
+				border-bottom-left-radius: inherit;
+				-webkit-border-bottom-right-radius: inherit;
+				border-bottom-right-radius: inherit;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div data-role="page" id="home">
+			<div data-role="header" class="ui-header-fullscreen">
+				<h1>标题栏</h1>
+			</div>
+
+			<div data-role="content">
+
+				<div id="tabs" data-role="tabs">
+					<div data-role="navbar">
+						<ul>
+							<li>
+								<a href="#one" id="navone"data-ajax="false" >one</a>
+							</li>
+							<li>
+								<a href="#two"  id="navtwo" data-ajax="false">two</a>
+							</li>
+							<li>
+								<a href="#three" id="navthree" data-ajax="false" >three</a>
+							</li>
+
+						</ul>
+					</div>
+
+					<div class="ui-content" id="one" >
+						<h3 class="ui-bar ui-bar-a ui-corner-all">文章标题</h3>
+						<div class="ui-body ui-body-a ui-corner-all">
+							<p>在很久很久，很久很久，很久很久，很久很久，很久很久，很久很久，很久很久以前，有一只猫。下面没有了。</p>
+						</div>
+					</div>
+
+					<div class="ui-content" id="two" >
+						<h3>车标</h3>
+						<ul data-role="listview">
+							<li>
+								<a href="#">Acura</a>
+							</li>
+							<li>
+								<a href="#">Audi</a>
+							</li>
+							<li>
+								<a href="#">BMW</a>
+							</li>
+							<li>
+								<a href="#">Cadillac</a>
+							</li>
+							<li>
+								<a href="#">Ferrari</a>
+							</li>
+
+						</ul>
+
+					</div>
+
+					<div id="three" class="ui-content ui-corner-all custom-corners">
+						<div class="ui-bar ui-bar-b">
+							<h3>猫的理想</h3>
+						</div>
+						<div class="ui-body ui-body-a">
+							<p>我要做一只薛定谔的猫。听起来好像很牛叉的样子。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div data-role="footer" class="ui-footer-fixed">
+				<h3>我是页脚</h3>
+
+			</div>
+
+	</body>
+
+</html>

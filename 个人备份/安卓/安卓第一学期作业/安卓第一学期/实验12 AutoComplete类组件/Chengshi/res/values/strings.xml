@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Chengshi</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+     <string-array name="city">
+        <item>广州</item>
+        <item>深圳</item>
+        <item>佛山</item>
+    </string-array> 
+    <string-array name="guangzhou">
+        <item>越秀</item>
+        <item>荔湾</item>
+        <item>天河</item>
+        <item>白云</item>
+        <item>海珠</item>
+        <item>黄埔</item>
+        <item>番禺</item>
+        <item>增城</item>
+        <item>从化</item>
+        <item>南沙</item>
+    </string-array>
+    <string-array name="shenzhen">
+        <item>罗湖</item>
+        <item>福田</item>
+        <item>盐田</item>
+        <item>南山</item>
+        <item>龙岗</item>
+        <item>宝安</item>
+        <item>光明</item>
+        <item>龙华</item>
+        <item>坪山</item>
+    </string-array>
+    <string-array name="foshan">
+        <item>禅城</item>
+        <item>南海</item>
+        <item>顺德</item>
+        <item>三水</item>
+        <item>高明</item>
+    </string-array>
+     
+
+
+
+</resources>

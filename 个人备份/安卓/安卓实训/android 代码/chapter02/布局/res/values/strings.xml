@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">布局</string>
+    <string name="menu_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="inputPsw">请输入您的密码</string>
+    <string name="psw">密    码 :</string>
+    <string name="xingbie">性别</string>
+    <string name="nv">女</string>
+    <string name="nan">男</string>
+    <string name="username">用户名 :</string>
+    <string name="inputUsername">请输入您的用户名</string>
+    <string name="regist">注册</string>
+
+</resources>

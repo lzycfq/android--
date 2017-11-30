@@ -1,0 +1,133 @@
+package com.example.chzy10;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
+import android.view.Menu;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class MainActivity extends Activity implements SensorEventListener {
+	private TextView textOrientation;
+	private ImageView imgBagua;
+	private float decDegree = 0;
+	private SensorManager mSensorManager;
+	//原始图片
+	private Bitmap sourceBmp;
+	private int mWidth ;
+	private int mHeight ;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        sourceBmp = BitmapFactory.decodeResource(getResources(),
+				R.drawable.bagua);
+		mWidth = sourceBmp.getWidth();
+		mHeight = sourceBmp.getHeight();
+
+		textOrientation = (TextView) findViewById(R.id.textOrientation);
+		imgBagua = (ImageView) findViewById(R.id.imgBagua);
+		imgBagua.setImageBitmap(sourceBmp);
+		mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+    
+
+protected void onResume() {	
+	super.onResume();
+	// 定义方向传感器		
+	Sensor sensor = mSensorManager
+			.getDefaultSensor(Sensor.TYPE_ORIENTATION);
+	if (sensor != null) {
+		// 注册SensorManager,this->接收sensor的实例 ,接收传感器类型,接收的频率
+		mSensorManager.registerListener(this, sensor,
+				SensorManager.SENSOR_DELAY_NORMAL);
+	}
+}
+private void setOrientationText(float degree) {
+	String message = "";
+	// 设置灵敏度，变化大于5度才有更新
+	if (Math.abs(decDegree-degree)>=5) {
+		decDegree = degree;
+		// 正负22度都属于同一方向
+		int range = 22;
+		// 各方向的计算与设定
+		
+		String degreeStr=String.valueOf(decDegree);
+		// 指向正北
+					if (decDegree > 360 - range || decDegree < 0 + range) {
+						message = "坎 " + degreeStr + "°";
+					}
+					// 指向正东
+					if (decDegree > 90 - range && decDegree < 90 + range) {
+						message = "震 " + degreeStr + "°";
+					}
+					// 指向正南
+					if (decDegree > 180 - range && decDegree < 180 + range) {
+						message = "巽 " + degreeStr + "°";
+					}
+					// 指向正西
+					if (decDegree > 270 - range && decDegree < 270 + range) {
+						message = "兑 " + degreeStr + "°";
+					}
+					// 指向东北
+					if (decDegree > 45 - range && decDegree < 45 + range) {
+						message = "艮 " + degreeStr + "°";
+					}
+					// 指向东南
+					if (decDegree > 135 - range && decDegree < 135 + range) {
+						message = "震 " + degreeStr + "°";
+					}
+					// 指向西南
+					if (decDegree > 225 - range && decDegree < 225 + range) {
+						message = "坤 " + degreeStr + "°";
+					}
+					// 指向西北
+					if (decDegree > 315 - range && decDegree < 315 + range) {
+						message = "乾 " + degreeStr + "°";
+		textOrientation.setText(message);
+		//定义转换矩阵
+		Matrix mt = new Matrix();
+		//旋转当前的角度
+		mt.postRotate(decDegree);
+		//在原图旋转后定义一张新图片
+		Bitmap turnBmp = Bitmap.createBitmap(sourceBmp, 0, 0, mWidth,
+				mHeight, mt, true);
+		//将新图片设置到ImageView
+		imgBagua.setImageBitmap(turnBmp);
+					}
+	}
+}
+
+public void onSensorChanged(SensorEvent event) {
+	// 接受方向感应器的类型
+	if (event.sensor.getType()==Sensor.TYPE_ORIENTATION) {
+		//获取X的变化角度
+		float x=event.values[SensorManager.DATA_X];
+		//执行x变化后的显示
+		setOrientationText(x);
+	}
+}
+
+
+@Override
+public void onAccuracyChanged(Sensor sensor, int accuracy) {
+	// TODO Auto-generated method stub
+	
+}
+}
+

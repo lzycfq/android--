@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources >
+    <color name="SaoMiao_Btn_Nomal">#60AFF8</color>
+    <color name="SaoMiao_Btn_Press">#9AC7F0</color>
+    <color name="huise">#E4E7E4</color>
+    <color name="lanse">#63ACF5</color>
+    <color name="baise">#FFFFFF</color>
+</resources>

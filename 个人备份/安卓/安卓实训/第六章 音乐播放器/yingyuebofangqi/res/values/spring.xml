@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="languages">      
+        <item>扫描歌曲</item>
+        <item>升级音质</item>
+        <item>匹配词图</item>
+        <item>恢复助手</item>
+    </string-array>
+   
+</resources>

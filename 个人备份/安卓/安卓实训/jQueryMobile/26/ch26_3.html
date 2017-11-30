@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>jQuery Mobile</title>
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+		<!--<link rel="stylesheet" href="css/theme-classic.css" />-->
+		<script src="js/jquery.min.js"></script>
+		<script>
+			$(document).on("pageinit", "#home", function() {
+				$("#btnpost").click(function() {
+					$.post("responseDemo2.jsp", {
+						"fname": $("#fname").val(),
+						"comment": $("#comment").val()
+					}, function(data, status) {
+						$("#message").text(data.username+"说:"+data.msg);
+					});
+				});
+			});
+		</script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+
+	<body>
+		<div data-role="page" id="home">
+			<div data-role="header">
+				<h1>标题栏</h1>
+			</div>
+			<div data-role="content">
+
+				<div data-role="fieldcontain">
+					<label for="fname">姓名:</label>
+					<input type="text" name="fname" id="fname">
+					<label for="comment">内容:</label>
+					<textarea cols=40 rows=5 name="comment" id="comment"></textarea>
+				</div>
+
+				<input type="button" id="btnpost" value="提交" />
+				
+				<p id="message">未有消息</p>
+
+			</div>
+
+			<div data-role="footer" class="ui-footer-fixed">
+				<h1>CopyRight</h1>
+			</div>
+		</div>
+
+	</body>
+
+</html>

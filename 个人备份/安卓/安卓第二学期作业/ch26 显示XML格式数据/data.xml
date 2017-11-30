@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data>
+	<Status>true</Status>
+	<Student>
+		<Sno>4</Sno>
+		<Name>Jack</Name>
+		<Marks>
+			<Subject name="Chinese">65</Subject>
+			<Subject name="Math">74</Subject>
+			<Subject name="English">87</Subject>
+		</Marks>
+	</Student>
+</Data>

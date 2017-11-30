@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Andriod资源演示</string>
+    <string name="hello_world">你好,世界</string>
+    <string name="shape_test">测试形状</string>
+    <string name="state_list_drawable_test">状态切换列表测试</string>
+    <string name="style_test">样式测试</string>
+
+</resources>

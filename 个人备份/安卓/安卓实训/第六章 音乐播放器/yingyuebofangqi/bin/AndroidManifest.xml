@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="Song.songActivty"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+ <!-- android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" -->
+    <application
+        android:icon="@drawable/im"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name="songActivty.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="songTab.TabOne"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="songTab.TabTwo"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="songTab.TabThree"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="songTab.TabShowMusic"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="songActivty.SongLyric"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="songActivty.SongloveActivity"
+            android:label="@string/title_activity_songlove" >
+        </activity>
+    </application>
+
+</manifest>

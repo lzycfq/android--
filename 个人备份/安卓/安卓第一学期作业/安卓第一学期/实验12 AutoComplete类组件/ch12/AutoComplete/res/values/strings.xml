@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AutoComplete</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string-array name="city">
+        <item>广州市</item>
+        <item>佛山市</item>
+        <item>深圳市</item>
+        <item>珠海市</item>
+        <item>中山市</item>
+        <item>汕尾市</item>
+        <item>潮洲市</item>
+        <item>汕头市</item>
+        <item>揭阳市</item>
+        <item>韶关市</item>
+        <item>河源市</item>
+        <item>梅洲市</item>
+        <item>惠州市</item>
+        <item>江门市 </item>
+        <item>云浮市</item>
+        <item>Guangzhou</item>
+        <item>Foshan</item>
+        <item>Shenzhen</item>
+        <item>Zhuhai</item>
+        <item>Zhongshan</item>
+        <item>Shanwei</item>
+        <item>Chaozhou</item>
+        <item>Shantou</item>
+        <item>Jieyang</item>
+        <item>Shaoguan</item>
+        <item>Heyuan</item>
+        <item>Meizhou</item>
+        <item>Huizhou</item>
+        <item>Jiangmen</item>
+        <item>Yunfu</item>
+        <item>Zhaoqing</item>
+    </string-array>  
+</resources>
