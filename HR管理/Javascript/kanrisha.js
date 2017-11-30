@@ -1,7 +1,3 @@
-/* 
-	Kanrisha: A Premium HTML5 Responsive Admin Template
-	COPYRIGHT Â© 2012 Mahieddine Abd-kader (@mitgux)
-*/
 
 var kanrisha_method = {
 	
@@ -294,7 +290,7 @@ $(function () {
 	$(".datatable").dataTable({
         "sDom": "<'dtTop'<'dtShowPer'l><'dtFilter'f>><'dtTables't><'dtBottom'<'dtInfo'i><'dtPagination'p>>",
         "oLanguage": {
-            "sLengthMenu": "Show entries _MENU_",
+            "sLengthMenu": " 展示条数  _MENU_",
         },
         "sPaginationType": "full_numbers",
         "fnInitComplete": function(){
@@ -412,47 +408,8 @@ $(function () {
 	
 	$(".wysiwyg").cleditor({width:"100%", height:"100%"});
 
-/* Calendar ========================================== */
-	// Get Date
-	var date = new Date();
-	var d = date.getDate();
-	var m = date.getMonth();
-	var y = date.getFullYear(); 
 
-	$(".aCalendar").fullCalendar({
-	    header: {
-			left: 'prev',
-			center: 'title',
-			right: 'next'
-		},
-		editable: true,
-		events: [
-		{
-			title: 'This is an Event',
-			start: new Date(y, m, 4),
-			end: new Date(y, m, 6)
-		},
-		{
-			id: 999,
-			title: 'A Task',
-			start: new Date(y, m, 4, 10, 30),
-			allDay: false,
-		},
-		{
-			title: 'Today Event',
-			start: new Date(y, m, d)
-		},
-		{
-			title: 'Guys Meeting',
-			start: new Date(y, m, 14),
-		},
-		{
-			title: 'CSS Conferences',
-			start: new Date(y, m, 23),
-			end: new Date(y, m, 25),
-		},
-	]});
-
+	
 /* Slider ============================================ */
 	$(".sSimple").slider();
 
