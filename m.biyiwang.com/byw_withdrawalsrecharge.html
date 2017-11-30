@@ -1,0 +1,185 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="m.biyinwang.com" />
+<meta name="applicable-device" content="mobile" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>会员中心</title>
+<link href="css/public.css" rel="stylesheet" type="text/css" />
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.js"></script>
+<script src="layer/layer.js"></script>
+<script src="js/js.js"></script>
+<script>
+$(window).load(function() {
+	$("#status").fadeOut();
+	$("#preloader").delay(350).fadeOut("slow");
+})
+</script>
+<script type="text/javascript">
+$(function(){
+	//出现浮动层
+	$(".ljzf_but").click(function(){
+		$(".ftc_wzsf").show();
+		});
+	//关闭浮动
+	$(".close").click(function(){
+		$(".ftc_wzsf").hide();
+		});
+		//数字显示隐藏
+		$(".xiaq_tb").click(function(){
+		$(".numb_box").slideUp(500);
+		});
+		$(".mm_box").click(function(){
+		$(".numb_box").slideDown(500);
+		});
+		//----
+		var i = 0;
+		$(".nub_ggg li a").click(function(){
+			i++
+			if(i<6){
+				$(".mm_box li").eq(i-1).addClass("mmdd");
+				}else{
+					$(".mm_box li").eq(i-1).addClass("mmdd");
+					setTimeout(function(){
+					location.href="byw_zfsuccess.html";
+					},500);
+					
+			 }
+		});
+		
+		$(".nub_ggg li .del").click(function(){
+			
+			if(i>0){
+				i--
+				$(".mm_box li").eq(i).removeClass("mmdd");
+				i==0;
+				}
+			//alert(i);
+			
+			
+			 
+		});
+		
+ 
+		
+	 
+});
+</script>
+	</head>
+	<body>
+
+	<!--页面加载 开始-->
+  <div id="preloader">
+    <div id="status">
+      <p class="center-text"><span>拼命加载中···</span></p>
+    </div>
+  </div>
+  
+   <!--页面加载 结束--> 
+  <!--header 开始-->
+  
+  <header>
+    <div class="header"> <a class="new-a-back" href="javascript:history.back();"> <span><img src="images/iconfont-fanhui.png"></span> </a>
+      <h2>比银网.充值</h2>
+      </div>
+  </header>
+
+  <!--
+  	作者：691574108@qq.com
+  	时间：2017-11-08
+  	描述：充值选择
+  -->
+
+  <div id="recharge" onclick="ShowDiv('MyDiv','fade')">
+
+  	<div class="imgrecharge"><img src="images/5374739ec9cdf.png" id="fkimg"></div>
+  	<div class="namerecharge"><a id="yhname">中国建设银行</a><p id="zhnumber">7501</a></div>
+  	<div class="numberrecharge icon"></div>
+
+  </div>
+<div id="MyDiv" class="white_content">
+				<div style=" cursor: default; height: 40px;font-size: 15px; background-color:white; line-height: 10px; border-bottom: 1px solid;" id="move">
+				<p align="center"><span style="font-size: 16px; float:left; cursor: pointer;color:#DFE0E1;position: relative;left:10px;"" onclick="CloseDiv('MyDiv','fade')">X</span><span>选择充值方式</span><span style="float: right; position: relative;right:10px;">?</span></p>
+
+ <div id="recharge1">
+
+  	<div class="imgrecharge1"><img src="images/5374739ec9cdf.png" id="fkimg1"></div>
+  	<div class="namerecharge1"><a id="yhname1">中国建设银行</a><p id="zhnumber1">银行单笔金额交易限额10000.00元</a></div>
+  	<div class="numberrecharge icon"></div>
+
+  </div>
+  <div id="recharge2">
+
+  	<div class="imgrecharge2"><img src="images/iconfont-jiaofei.png" id="fkimg2"></div>
+  	<div class="namerecharge2"><a id="yhname2">添加银行卡充值</a><p id="zhnumber2">银行单笔金额交易限额10000.00元</a></div>
+  	<div class="numberrecharge icon"></div>
+
+  </div>
+				</div>
+		
+
+			</div>
+  <!--
+  	作者：691574108@qq.com
+  	时间：2017-11-08
+  	描述：充值多少
+  -->
+  <div id="czmoney">
+  	<div class="tip">
+  	  <p style="color: #999999; font-size: 13px;">该卡本次最多可充值10000元</p></div>
+  	<!--<form id="getmoney" action="" >-->
+  	<div class="czm"> 		
+  	<div class="czcenter">
+  		<label>金额</label><input type="text" class="czinput" placeholder="请输入充值金额" />
+  	</div>  	
+  	</div>
+  <p align="center"><input type="submit" id="geym" value="充值" href="javascript:void(0);" class="ljzf_but all_w"/></p>
+  	  <!--	</form>-->
+  </div>
+<!--  浮动充值框-->
+  <div class="ftc_wzsf">
+  <div class="srzfmm_box">
+    <div class="qsrzfmm_bt clear_wl"> <img src="images/xx_03.jpg" class="tx close fl" > <img src="images/jftc_03.jpg" class="tx fl" ><span class="fl">请输入支付密码</span> </div>
+    <div class="zfmmxx_shop">
+      <div class="mz"><a id="element">比银网</a></div>
+      <div class="wxzf_price">￥<a id="bywmoney">150</a></div>
+    </div>
+    <a href="cg.html" class="blank_yh"> <img src="images/5374739ec9cdf.png" class="fl"  ><span class="fl ml5">中国建设银行</span> <img src="images/jftc_09.jpg" class="fr"></a>
+    <ul class="mm_box">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <div class="numb_box">
+    <div class="xiaq_tb"> <img src="images/jftc_14.jpg" height="10"> </div>
+    <ul class="nub_ggg">
+      <li><a href="javascript:void(0);">1</a></li>
+      <li><a href="javascript:void(0);" class="zj_x">2</a></li>
+      <li><a href="javascript:void(0);">3</a></li>
+      <li><a href="javascript:void(0);">4</a></li>
+      <li><a href="javascript:void(0);" class="zj_x">5</a></li>
+      <li><a href="javascript:void(0);">6</a></li>
+      <li><a href="javascript:void(0);">7</a></li>
+      <li><a href="javascript:void(0);" class="zj_x">8</a></li>
+      <li><a href="javascript:void(0);">9</a></li>
+      <li><span></span></li>
+      <li><a href="javascript:void(0);" class="zj_x">0</a></li>
+      <li><span  class="del" ><img src="images/jftc_18.jpg"></span></li>
+    </ul>
+  </div>
+  <div class="hbbj"></div>
+</div>  
+           
+           <div class="foot" >
+           	<div class="fa"><a class="y">现金借款</a>&nbsp;<a class="y">常见问题</a></div>
+           <div class="copyright1">经营许可证号:<a href="http://www.miit.gov.cn/" style="color: #666666;">粤ICP备17082633号-1</a>  Powered by biyin 1.0</div>
+</div>
+  
+ 	
+	</body>
+</html>

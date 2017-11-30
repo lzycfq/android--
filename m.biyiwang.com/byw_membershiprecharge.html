@@ -1,0 +1,281 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="m.biyinwang.com" />
+<meta name="applicable-device" content="mobile" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>会员充值</title>
+<link href="css/public.css" rel="stylesheet" type="text/css" />
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.js"></script>
+<script src="layer/layer.js"></script>
+<script src="js/js.js"></script>
+<script>
+$(window).load(function() {
+	$("#status").fadeOut();
+	$("#preloader").delay(350).fadeOut("slow");
+})
+</script>
+<script type="text/javascript">
+$(function(){
+	//出现浮动层
+	$(".ljzf_but").click(function(){
+		$(".ftc_wzsf").show();
+		});
+	//关闭浮动
+	$(".close").click(function(){
+		$(".ftc_wzsf").hide();
+		});
+		//数字显示隐藏
+		$(".xiaq_tb").click(function(){
+		$(".numb_box").slideUp(500);
+		});
+		$(".mm_box").click(function(){
+		$(".numb_box").slideDown(500);
+		});
+		//----
+		var i = 0;
+		$(".nub_ggg li a").click(function(){
+			i++
+			if(i<6){
+				$(".mm_box li").eq(i-1).addClass("mmdd");
+				}else{
+					$(".mm_box li").eq(i-1).addClass("mmdd");
+					setTimeout(function(){
+					location.href="byw_zfsuccess.html";
+					},500);
+					
+			 }
+		});
+		
+		$(".nub_ggg li .del").click(function(){
+			
+			if(i>0){
+				i--
+				$(".mm_box li").eq(i).removeClass("mmdd");
+				i==0;
+				}
+			//alert(i);
+			
+			
+			 
+		});
+		
+ 
+		
+	 
+});
+</script>
+	</head>
+	<body>
+
+	<!--页面加载 开始-->
+  <div id="preloader">
+    <div id="status">
+      <p class="center-text"><span>拼命加载中···</span></p>
+    </div>
+  </div>
+  <!--页面加载 结束--> 
+  <!--header 开始-->
+  <div style="clear: both;"></div>
+  <header>
+    <div class="header"> <a class="new-a-back" href="javascript:history.back();"> <span><img src="images/iconfont-fanhui.png"></span> </a>
+      <h2>比银网.会员充值</h2>
+      </div>
+  </header>
+  <div style="clear: both;"></div>
+  
+<!--  会员充值-->
+<div id="membership">
+ 	<div class="menbershipsenter">
+ 		<p><span class="hy">vip</span>&nbsp;会员享有下款子，福利等优惠权利和信息</p>
+ 	</div>
+ </div>
+<div class="bzzx_bt"> 
+	<br />
+    <form name="hy" id="hy1" class="hy1" action=""> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="zwfb_shop_table">
+      <tr valign="top">
+        <td align="right" style="position: relative;">服务名称：</td>
+        <td><ul class="fwmc_xxk">
+            <li class="on">
+              <p>比银网会员</p>
+              <i id="jg1">99</i>元</li>
+          
+          </ul></td>
+      </tr>
+      <tr>
+        <td align="right">会员：</td>
+        <td><div class=" zwsl_num">1个<span>会员数量</span></div> </td>
+      </tr>
+      <tr>
+        <td height="20"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td align="right">购买月数：</td>
+        <td><ul class="nmb_jj">
+            <li class="jian">-</li>
+            <li>
+              <input name="hynumber" type="text" value="1" class="srkk" />
+            </li>
+            <li class="jia">+</li>  
+          </ul></td>
+      </tr>
+      <tr>
+        <td height="20"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td align="right">价格：</td>
+        <td><div class="zwfb_zje"><span id="spjg">99</span> <i>元</i></div></td>
+      </tr>
+      
+      <tr>
+        <td height="20"></td>
+        <td></td>
+      </tr>
+      
+      <tr>
+        <td></td>
+        <td><a class="ty_but ml20 show ljzf_but all_w" href="#" id="ac" href="javascript:void(0);"  >购 买</a></td>
+      </tr>
+    </table>
+    </form>
+
+		
+
+			
+ 
+  </div>
+</div>
+</div>
+<div style="clear: both;"></div>
+ <!--   支付弹窗-->
+
+     <!--浮动层-->
+
+<div class="ftc_wzsf">
+  <div class="srzfmm_box">
+    <div class="qsrzfmm_bt clear_wl"> <img src="images/xx_03.jpg" class="tx close fl" > <img src="images/jftc_03.jpg" class="tx fl" ><span class="fl">请输入支付密码</span> </div>
+    <div class="zfmmxx_shop">
+      <div class="mz"><a id="element">比银网</a></div>
+      <div class="wxzf_price">￥<a id="bywmoney">150</a></div>
+    </div>
+    <a href="cg.html" class="blank_yh"> <img src="images/5374739ec9cdf.png" class="fl"  ><span class="fl ml5">中国建设银行</span> <img src="images/jftc_09.jpg" class="fr"></a>
+    <ul class="mm_box">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <div class="numb_box">
+    <div class="xiaq_tb"> <img src="images/jftc_14.jpg" height="10"> </div>
+    <ul class="nub_ggg">
+      <li><a href="javascript:void(0);">1</a></li>
+      <li><a href="javascript:void(0);" class="zj_x">2</a></li>
+      <li><a href="javascript:void(0);">3</a></li>
+      <li><a href="javascript:void(0);">4</a></li>
+      <li><a href="javascript:void(0);" class="zj_x">5</a></li>
+      <li><a href="javascript:void(0);">6</a></li>
+      <li><a href="javascript:void(0);">7</a></li>
+      <li><a href="javascript:void(0);" class="zj_x">8</a></li>
+      <li><a href="javascript:void(0);">9</a></li>
+      <li><span></span></li>
+      <li><a href="javascript:void(0);" class="zj_x">0</a></li>
+      <li><span  class="del" ><img src="images/jftc_18.jpg"></span></li>
+    </ul>
+  </div>
+  <div class="hbbj"></div>
+</div>  
+
+    
+<!-- 会员结束-->
+           
+           <div class="foot" >
+           	<div class="fa"><a class="y">现金借款</a>&nbsp;<a class="y">常见问题</a></div>
+           <div class="copyright1">经营许可证号:<a href="http://www.miit.gov.cn/" style="color: #666666;">粤ICP备17082633号-1</a>  Powered by biyin 1.0</div>
+</div>
+
+ 	
+	</body>
+	<script type="text/javascript">
+$(document).ready(function(e) {
+    $(".fwmc_xxk li").click(function(){
+	
+		$(this).addClass("on").siblings().removeClass("on");
+		tola();
+		});
+	//加
+	$(".jia").click(function(){
+		var fw_numb = $(".srkk").val();	
+		fw_numb++;
+		$(".srkk").val(fw_numb);		
+	
+		tola();
+		})
+		
+	//减
+	$(".jian").click(function(){
+		var fw_numb = $(".srkk").val();	
+		if(fw_numb <= 1){
+			alert("不能低于0，请住手了哈！")
+			}else{
+		fw_numb--;
+		$(".srkk").val(fw_numb);		
+			}
+		
+		tola();
+		})	
+	 
+	
+});
+
+function tola(){
+		var $li = $(".fwmc_xxk").children("li.on");
+		var money = $li.children("i").text();
+		var count = $(".srkk").val();
+		$(".zwfb_zje span").text(money*count);
+}
+
+</script>
+<script >
+/*会员购买表单提交*/
+     $('#ac').on('click', function() {
+
+    $('#hy').on('submit', function() {
+    	
+        var hynumber = $('inpur[name=hynumebr]').val();
+       
+       /* 遍历span
+        * var str = "";//定义div里所有span的值组成的字符串
+var spans = new Array();//定义一个数组，用来存放每一个span的值*/
+/*$(".bzzx_bt span").each(function(i, obj){
+    spans[i] = $(this).text();
+});//循环取出span的值放入数组中
+str = spans.join(",");将数组中的值用逗号连接起来*/
+   
+
+        $(this).ajaxSubmit({
+            type: 'post', // 提交方式 get/post
+            url: 'xx', // 需要提交的 url
+            data: {              
+                'hynumber':hynumber              
+            },
+            success: function(data) { // data 保存提交后返回的数据，一般为 json 数据
+                // 此处可对 data 作相关处理
+                alert('充值成功！');
+                Window.href="muyee_cityinedx.html";
+            }
+          /*  $('regis').resetForm(); // 提交后重置表单*/
+        });
+        return false; // 阻止表单自动提交事件
+    
+});
+});
+</script>
+</html>
+
